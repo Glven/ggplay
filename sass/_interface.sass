@@ -29,7 +29,8 @@ body
         box-shadow: 0 0 12px rgba(#000, 0.12)
 .inputBox
     position: relative
-    margin-bottom: 2rem
+    display: flex
+    flex-direction: column
     &__label
         position: absolute
         z-index: 2
@@ -42,7 +43,7 @@ body
         transform: translate(2rem, -50%)
         background: $body-bg
         transition: 0.3s ease 
-    &__input
+    &__input, &__select, &__textarea
         padding: 1.5rem 1.7rem
         background: transparent
         border-radius: 10px
@@ -52,6 +53,12 @@ body
         transition: 0.3s ease
         &:placeholder
             color: $gray
+        &:focus
+            border-color: $primary
+            +.inputBox__label
+                color: $primary
+    &__textarea
+        resize: none
     &__errorText
         position: absolute
         top: 100%

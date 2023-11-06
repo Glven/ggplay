@@ -12,6 +12,60 @@
 </head>
 <body>
     
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <a href="index.html" class="header__logo">Сократика</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero__wrapper">
+                <form action="#" method="post" class="hero__form form">
+                    <h1 class="form__title">01 Заполни форму</h1>
+                    <div class="form__group">
+                        <div class="inputBox form__theme">
+                            <input id="form__theme" type="text" placeholder="Напиши что-то конкретное" class="inputBox__input" required>
+                            <label for="form__theme" class="inputBox__label">Тема урока</label>
+                        </div>
+                        <div class="inputBox form__grade">
+                            <select name="grade" id="form__grade" class="inputBox__select">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            <label for="form__grade" class="inputBox__label">Класс</label>
+                        </div>
+                    </div>
+                    <div class="sample">
+                        <div class="sample-wrapper">
+                            <span class="sample__item">Генетика</span>
+                            <span class="sample__item">Анатомия человека</span>
+                            <span class="sample__item">Вулканы</span>
+                            <span class="sample__item">Зимние виды спорта</span>
+                            <span class="sample__item">Радуга</span>
+                            <span class="sample__item">Индийская культура</span>
+                        </div>
+                        <span class="sample__btn">Показать больше вариантов</span>
+                    </div>
+                    <div class="inputBox form__text">
+                        <textarea name="text" id="form__text" rows="3" placeholder="Напиши свою учебную цель" class="inputBox__textarea"></textarea>
+                        <label for="form__text" class="inputBox__label">Цель урока</label>
+                        <span id="form__count" class="inputBox__count form__count">0 / 200</span>
+                    </div>
+                    <div class="form__buttons">
+                        <button class="btn btn--trans form__btn">Назад</button>
+                        <button class="btn btn--disabled form__btn">Следующий шаг</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <script src="js/main.js"></script>
 </body>
 </html>
