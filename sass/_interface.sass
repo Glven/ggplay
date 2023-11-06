@@ -1,0 +1,73 @@
+$primary: #3CA9F0
+$dark: #343434
+$bg: #EEEFF0
+$error: #FF395D
+$light: #fff
+$gray: #9A9A9A
+$body-bg: #FDFEFF
+body
+    background: $body-bg
+.btn
+    display: inline-block
+    padding: 1.8rem 5.2rem
+    font-size: 1.8rem
+    border: 1px solid #000
+    border-radius: 12px
+    cursor: pointer
+    &--trans
+        background: transparent
+        border-color: $primary
+        color: $primary
+    &--disabled
+        background: $bg
+        color: $gray
+        border-color: $bg
+    &--enabled
+        color: $light
+        background: $primary
+        border-color: $primary
+        box-shadow: 0 0 12px rgba(#000, 0.12)
+.inputBox
+    position: relative
+    margin-bottom: 2rem
+    &__label
+        position: absolute
+        z-index: 2
+        left: 0
+        top: 0
+        color: $dark
+        font-weight: 400
+        font-size: 1.6rem
+        cursor: default
+        transform: translate(2rem, -50%)
+        background: $body-bg
+        transition: 0.3s ease 
+    &__input
+        padding: 1.5rem 1.7rem
+        background: transparent
+        border-radius: 10px
+        border: 1.25px solid #EAEAEA
+        font-size: 1.8rem
+        color: $dark
+        transition: 0.3s ease
+        &:placeholder
+            color: $gray
+    &__errorText
+        position: absolute
+        top: 100%
+        left: 0
+        transform: translateX(2rem)
+        color: $error
+        font-weight: 400
+        font-size: 1.4rem
+        transition: 0.3s ease
+        display: none
+        z-index: 3
+    &--error
+        .inputBox
+            &__label
+                color: $error
+            &__input
+                border-color: $error
+            &__errorText
+                display: block

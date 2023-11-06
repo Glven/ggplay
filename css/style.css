@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+html {
+  font-size: 10px;
+  font-display: swap;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+}
+
+body {
+  background: #FDFEFF;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1.8rem 5.2rem;
+  font-size: 1.8rem;
+  border: 1px solid #000;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.btn--trans {
+  background: transparent;
+  border-color: #3CA9F0;
+  color: #3CA9F0;
+}
+.btn--disabled {
+  background: #EEEFF0;
+  color: #9A9A9A;
+  border-color: #EEEFF0;
+}
+.btn--enabled {
+  color: #fff;
+  background: #3CA9F0;
+  border-color: #3CA9F0;
+  -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 0 12px rgba(0, 0, 0, 0.12);
+}
+
+.inputBox {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.inputBox__label {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  color: #343434;
+  font-weight: 400;
+  font-size: 1.6rem;
+  cursor: default;
+  -webkit-transform: translate(2rem, -50%);
+      -ms-transform: translate(2rem, -50%);
+          transform: translate(2rem, -50%);
+  background: #FDFEFF;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.inputBox__input {
+  padding: 1.5rem 1.7rem;
+  background: transparent;
+  border-radius: 10px;
+  border: 1.25px solid #EAEAEA;
+  font-size: 1.8rem;
+  color: #343434;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.inputBox__input:placeholder {
+  color: #9A9A9A;
+}
+.inputBox__errorText {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  -webkit-transform: translateX(2rem);
+      -ms-transform: translateX(2rem);
+          transform: translateX(2rem);
+  color: #FF395D;
+  font-weight: 400;
+  font-size: 1.4rem;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  display: none;
+  z-index: 3;
+}
+.inputBox--error .inputBox__label {
+  color: #FF395D;
+}
+.inputBox--error .inputBox__input {
+  border-color: #FF395D;
+}
+.inputBox--error .inputBox__errorText {
+  display: block;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+}
