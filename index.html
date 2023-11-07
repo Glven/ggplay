@@ -29,8 +29,18 @@
                         <div class="inputBox form__theme">
                             <input id="form__theme" type="text" placeholder="Напиши что-то конкретное" class="inputBox__input" required>
                             <label for="form__theme" class="inputBox__label">Тема урока</label>
+                            <div class="inputBox__clean">
+                                <span></span>
+                            </div>
                         </div>
                         <div class="inputBox form__grade">
+                            <div class="form-select">
+                                <span class="form-select__value" id="1">1</span>
+                                <span class="form-select__value" id="2">2</span>
+                                <span class="form-select__value" id="3">3</span>
+                                <span class="form-select__value" id="4">4</span>
+                                <span class="form-select__value" id="5">5</span>
+                            </div>
                             <select name="grade" id="form__grade" class="inputBox__select">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -42,24 +52,20 @@
                         </div>
                     </div>
                     <div class="sample">
-                        <div class="sample-wrapper">
-                            <span class="sample__item">Генетика</span>
-                            <span class="sample__item">Анатомия человека</span>
-                            <span class="sample__item">Вулканы</span>
-                            <span class="sample__item">Зимние виды спорта</span>
-                            <span class="sample__item">Радуга</span>
-                            <span class="sample__item">Индийская культура</span>
+                        <div id="sample" class="sample-wrapper">
+                            
                         </div>
-                        <span class="sample__btn">Показать больше вариантов</span>
+                        <span id="sample__btn" class="sample__btn">Показать больше вариантов</span>
                     </div>
                     <div class="inputBox form__text">
                         <textarea name="text" id="form__text" rows="3" placeholder="Напиши свою учебную цель" class="inputBox__textarea"></textarea>
                         <label for="form__text" class="inputBox__label">Цель урока</label>
+                        <span class="inputBox__errorText">Enter your theme</span>
                         <span id="form__count" class="inputBox__count form__count">0 / 200</span>
                     </div>
                     <div class="form__buttons">
                         <button class="btn btn--trans form__btn">Назад</button>
-                        <button class="btn btn--disabled form__btn">Следующий шаг</button>
+                        <button id="submit" type="button" class="btn btn--disabled form__btn">Следующий шаг</button>
                     </div>
                 </form>
             </div>
