@@ -12,7 +12,9 @@ window.onload = () => {
     var flag = false;
     var sampleFlag=false;
     const select = document.getElementById('form__grade');
+    const newSelect = document.getElementById('form__newGrade');
     const dropDown = document.querySelector('.form-select');
+    const formGrade = document.querySelector('.form__grade');
     const dropElem = document.querySelectorAll('.form-select__value');
     text.addEventListener('input', ()=>{
         var count = text.value.length;
@@ -78,6 +80,8 @@ window.onload = () => {
             samples.push(samplElement);
             themeClean.style.display = 'none';
             formCount.innerHTML = '0 / 200';
+            newSelect.value = '1';
+            select.value = 1;
         }
         if(samples.length>5){
             for(var i = 5; i<samples.length; i++){
@@ -116,19 +120,30 @@ window.onload = () => {
         }
     }
 
-    select.addEventListener('click', ()=>{
+    newSelect.addEventListener('click', ()=>{
         if(dropDown.classList.contains('form-select--active')){
             dropDown.classList.remove('form-select--active');
+            formGrade.classList.remove('form__grade--active');
         }
         else{
             dropDown.classList.add('form-select--active');
+            formGrade.classList.add('form__grade--active');
         }
     });
+
+    document.addEventListener('mouseup', (e)=>{
+        if(e.target!==dropDown){
+            dropDown.classList.remove('form-select--active');
+            formGrade.classList.remove('form__grade--active');
+        }
+    });
+
 
     dropElem.forEach((i)=>{
         i.addEventListener('click', (e)=>{
             select.value = e.target.id;
             dropDown.classList.remove('form-select--active');
+            newSelect.value = e.target.id;
         });
     });
 
